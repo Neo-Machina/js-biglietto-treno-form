@@ -4,14 +4,106 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.form-item {
-    padding: 10px 20px;
+/* COMMON */
+body {
+    background-color: #b91450;
+    font-family: sans-serif;
 }
 
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 26px;
+}
+
+/* USER-FORM */
+.user-form {
+    background-color: white;
+    margin-top: 20px;
+    color: #b91450;
+    border-radius: 10px;
+    padding: 20px 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.flex-item {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    max-width: 710px;
+}
+.form-item {
+    text-align: center;
+}
+.form-item input, .form-item select {
+    border: 1px solid #b91450;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    padding: 4px 0;
+    margin-top: 15px;
+}
+/* Button-section */
+.button-section {
+    text-align: center;
+    padding-top: 55px;
+}
+.button-section * {
+    color: #b91450;
+    font-weight: bold;
+    background-color: #cccccc;
+    border-radius: 5px;
+    border: 1px solid #808080;
+    margin: 0 8px;
+    font-size: 16px;
+    padding: 5px;
+}
+.button-section #generate-ticket:focus {
+    border-color: #e99b55;
+}
+.button-section #cancel-ticket:focus {
+    border-color: #e99b55;
+}
 #ticket {
     display: none;
+    background-color: white;
+    
 }
 #ticket.active {
     display: block;
+    padding: 20px;
+}
+.flex-ticket {
+    display: flex;
+}
+.left-content .grey-box span {
+    display: block;
+}
+.grey-box {
+    width: 234px;
+    height: 120px;
+    background-color: #808080;
+    padding-top: 20px;
+    font-weight: bold;
+}
+.right-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+}
+.right-content div {
+    padding-top: 20px;
+    font-weight: bold;
+}
+.right-content div span {
+    display: block;
+    padding-top: 40px;
+    font-weight: 300;
 }

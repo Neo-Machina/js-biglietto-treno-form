@@ -6,8 +6,10 @@ generateButton.addEventListener('click',
         const userName = document.getElementById('user-name').value;
         const userKm = parseInt( document.getElementById('user-km').value );
         const userAge = document.getElementById('user-age').value;
+        
         // Prezzo standard
         const price = userKm * 0.21;
+
         // Sconto prezzo del biglietto per i minorenni e gli over 65
         let discount = 0;
 
@@ -16,10 +18,13 @@ generateButton.addEventListener('click',
         } else if (userAge === 'over') {
             discount = price * (40 / 100);
         }
+
         // Prezzo finale
         const finalPrice = price - discount;
+
         // Stampo l'userName nella sezione ticket
         document.getElementById('ticket-name').innerHTML = userName;
+
         // Tipologia di biglietto
         let ticketDiscount = 'Biglietto Standard';
 
@@ -28,6 +33,7 @@ generateButton.addEventListener('click',
         } else if (userAge === 'over') {
             ticketDiscount = 'Biglietto Over 65';
         }
+        
         // Stampo tipologia biglietto nella sezione ticket
         document.getElementById('ticket-discount').innerHTML = ticketDiscount;
         // Stampo numero carrozza nella sezione ticket
@@ -40,6 +46,7 @@ generateButton.addEventListener('click',
         document.getElementById('ticket').classList.add('active');
     }
 )
+
 // Cancel-ticket button
 const cancelTicket = document.getElementById('cancel-ticket');
 cancelTicket.addEventListener('click',

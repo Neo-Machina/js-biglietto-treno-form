@@ -9,39 +9,58 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- USER-FORM -->
+    <div class="container">
+        <div>
+            <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        
+            <div class="user-form">
+                <div class="flex-item">
+                    <div class="form-item">
+                        <label for="user-name">Nome Cognome</label>
+                        <input type="text" id="user-name">
+                    </div>
+            
+                    <div class="form-item">
+                        <label for="user-km">Km da percorrere</label>
+                        <input type="number" id="user-km">
+                    </div>
+            
+                    <div class="form-item">
+                        <label for="user-age">Fascia d'età</label>
+                        <select id="user-age">
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="minorenne">Minorenne</option>
+                            <option value="over">Over 65</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="button-section">
+                    <button id="generate-ticket">Genera</button>
+                    <button id="cancel-ticket">Annulla</button>
+                </div>
+            </div>
+        </div>
     
-    <div class="user-form">
-        <div class="form-item">
-            <label for="user-name">Nome Cognome</label>
-            <input type="text" id="user-name">
-        </div>
+        <div>
+            <h2>IL TUO BIGLIETTO</h2>
 
-        <div class="form-item">
-            <label for="user-km">Km da percorrere</label>
-            <input type="number" id="user-km">
+            <div id="ticket">
+                <h3>DETTAGLIO PASSEGGERI</h3>
+                <div class="flex-ticket">
+                    <div class="left-content">
+                        <div class="grey-box">NOME PASSEGGERO <span id="ticket-name"></span></div>
+                    </div>
+                    <div class="right-content">
+                        <div>Offerta <span id="ticket-discount"></span></div>
+                        <div>Carrozza <span id="ticket-carriage"></span></div>
+                        <div>Codice CP <span id="ticket-cp-code"></span></div>
+                        <div>Costo biglietto <span id="ticket-price"></span></div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="form-item">
-            <label for="user-age">Fascia d'età</label>
-            <select id="user-age">
-                <option value="maggiorenne">Maggiorenne</option>
-                <option value="minorenne">Minorenne</option>
-                <option value="over">Over 65</option>
-            </select>
-        </div>
-
-        <div class="form-item">
-            <button id="generate-ticket">Genera</button>
-            <button id="cancel-ticket">Annulla</button>
-        </div>
-    </div>
-
-    <div id="ticket">
-        <div>NOME PASSEGGERO <span id="ticket-name"></span></div>
-        <div>Offerta <span id="ticket-discount"></span></div>
-        <div>Carrozza <span id="ticket-carriage"></span></div>
-        <div>Codice CP <span id="ticket-cp-code"></span></div>
-        <div>Costo biglietto <span id="ticket-price"></span></div>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
