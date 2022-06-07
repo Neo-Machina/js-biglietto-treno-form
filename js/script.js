@@ -37,7 +37,7 @@ generateButton.addEventListener('click',
         // Stampo tipologia biglietto nella sezione ticket
         document.getElementById('ticket-discount').innerHTML = ticketDiscount;
         // Stampo numero carrozza nella sezione ticket
-        document.getElementById('ticket-carriage').innerHTML = Math.floor(Math.random() * 10);
+        document.getElementById('ticket-carriage').innerHTML = Math.floor(Math.random() * 10) + 1;
         // Stampo codice CP nella sezione ticket
         document.getElementById('ticket-cp-code').innerHTML = Math.floor(Math.random() * 99999) + 1;
         // Stampo il finalPrice nella sezione ticket
@@ -51,9 +51,18 @@ generateButton.addEventListener('click',
 const cancelTicket = document.getElementById('cancel-ticket');
 cancelTicket.addEventListener('click',
     function() {
+        // Sostizione valori del ticket
+        document.getElementById('ticket-name').value = '';
+        document.getElementById('ticket-discount').value = '';
+        document.getElementById('ticket-carriage').value = '';
+        document.getElementById('ticket-cp-code').value = '';
+        document.getElementById('ticket-price').value = '';
+        // Hidden ticket
+        document.getElementById('ticket').classList.remove('active');
+        // Sostituzione valori dei dati dell'utente
         document.getElementById('user-name').value = '';
         document.getElementById('user-km').value = '';
         document.getElementById('user-age').value = 'maggiorenne';
-        document.getElementById('ticket').classList.remove('active');
+        
     }
 )

@@ -88,7 +88,7 @@ h2 {
     width: 234px;
     height: 120px;
     background-color: #808080;
-    padding-top: 20px;
+    padding: 20px;
     font-weight: bold;
 }
 .right-content {
